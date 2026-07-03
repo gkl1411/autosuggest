@@ -7,10 +7,27 @@ h1 {
 }
 /* property - value */
 #home-card{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    border: 3px dotted peru;
+    border: 3px double peru;
 }
 
 #home-card:hover{
     background-color: darkgrey;
+}
+
+#navbar{
+    text-align: center;
+    background-color: brown;
+    height: 30px;
+    padding-top: 6px;
+    margin-bottom: 5px;
+}
+
+#navbar a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px 5px;
+    /*y-axis and x-axis*/
+    text-decoration: none;
+    color:white;
 }
