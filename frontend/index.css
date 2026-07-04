@@ -32,10 +32,17 @@ h1{
 }
 
 #card{
-    padding-top:20px;
+    align-items: center;
+    border: 3px solid black;
+    margin-top: 5px;
+    width: 300px;
+    height: 580px;
+    margin: 3px auto;
+    border-radius: 8px;
 }
 
 #image-card{
+    height: 300px;
     width:300px;
     margin:auto;
 }
@@ -43,13 +50,18 @@ h1{
 img{
     width:300px;
     height:300px;
+        border-radius: 8px;
+
 }
 
 #action{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align:center;
+
 }
 
 button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding:10px 20px;
-    font-size:16px;
+    width:100%;
 }
