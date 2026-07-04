@@ -3,24 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Card</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <div id = "navbar">
+
+    <div id="navbar">
         <a href="/">Home</a>
-        <a href="https://github.com" target = "_blank">GitHub</a>
-        <a href="https://leetcode.com" target = "_blank">LeetCode</a>
-        <a href="https://codechef.com" target = "_blank">CodeChef</a>
-        <a href="https://codeforces.com" target = "_blank">CodeForces</a>
-        <a href="./pages/autosuggest.html" target = "_blank">Auto Suggest</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://leetcode.com" target="_blank">LeetCode</a>
+        <a href="https://codechef.com" target="_blank">CodeChef</a>
+        <a href="https://codeforces.com" target="_blank">Codeforces</a>
+        <a href="./pages/autosuggest.html" target="_blank">Auto Suggest</a>
+    </div>
+
+    <div id="home-card">
+        <h1>Home Page</h1>
+        <p>This page contains operations on user card</p>
+        <p id="hover-line">You can view, toggle, get random users and much more</p>
+    </div>
+
+    <div id="card">
+
+        <div id="image-card">
+            <!-- Added id="img" -->
+            <img id="img" src="./images/jane.png" alt="No image found">
+        </div>
+
+        <div id="action">
+            <h1 id="card-name">Jane Doe</h1>
+            <p id="card-gender">Female</p>
+
+            <button onclick="toggle()">
+                Toggle
+            </button>
+
+        </div>
 
     </div>
-    <div id = "home-card">
-            <h1>Home Page</h1>
-            <p>This page contains opertaions on user card</p>
-                <p id = "hover-line">You can view, toggle, get random users and much more</p>
-    </div>
+
     <script src="index.js"></script>
+
 </body>
 </html>
