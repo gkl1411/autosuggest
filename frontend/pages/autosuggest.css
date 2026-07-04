@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+#lens{
+    align-items: center;
+}
+/*we use .class name for classes and #id for id's*/
+.left-bar{
+    align-items: left;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+input{
+    align-items: center;
+    text-align: center;
+}
+.right-bar{
+    align-items: right;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+#search-bar{
+    align-items: center;
+    margin-top: 100px;
+}
