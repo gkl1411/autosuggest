@@ -3,20 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Suggest Card</title>
-        <link rel="stylesheet" href="autosuggest.css">
-
+    <title>Document</title>
+      <link rel="stylesheet" href="autosuggest.css">
 </head>
 <body>
-    <div id = "settings">
-        <span class = "left-bar">&#x2699;</span></div>
-        <span class = "right-bar">&#x25CF; online | &#x1F552; - ms</span>
+<div id = "navbar">
+
+   <div id="setting"> 
+    <span class="left-bar"> &#x2699;</span>
+    <span class="right-bar">&bull; online | &#128338;  - ms</span>    
     </div>
-    <div id = "search-bar">
-        <h1>SmartSuggest</h1>
-        <p>One million phrases. Four algorithms. Prefix Based Auto Suggest</p>
-        <p>&#x1F50D;
-        <input type = "text" name = "prefix" placeholder="Start typing to search phrases"></p>
+
+</div>
+
+<div class="search-section">
+    <h1>
+       <span class="blue">Smart</span>Suggest
+    </h1>
+    <p>One million phrases. Four algorithms. Prefix Based Auto Suggest.</p>
+    <span> 
+          <span class="lens"> &#128269; </span>
+          <input class="search-box" id="search-box" placeholder="Start typing to search phrases">
+        </span>
+
+    <div id="suggestion-box">
+<!-- Suggestions will appear here -->
     </div>
-</body>	
+
+</div>
+
+<script>
+    var searchBox = document.getElementById("search-box");
+   var suggestionbox = document.getElementById("suggestion-box");
+
+searchBox.addEventListener("input", function () {
+
+    var userInput = searchBox.value;
+    if (userInput.trim() === "") {
+        suggestionbox.innerHTML = "";
+        return;
+    }
+
+    var url1 = "https://autosuggest-backend.onrender.com/api/autosuggest?q=";
+    var url3 = "&algorithm=brute&limit=10&weighted=false";
+    var url = url1 + userInput + url3;
+
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+
+            console.log(data);
+            var resultsArray = data.results;
+            var htmlResults = "";
+
+            for (var i = 0; i < resultsArray.length; i++) {
+                htmlResults += "<div id='suggestion-item'>" +
+                    resultsArray[i].text +
+                    "</div>";
+            }
+
+            suggestionbox.innerHTML = htmlResults;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+});
+</script>
+    
+</body>
 </html>
